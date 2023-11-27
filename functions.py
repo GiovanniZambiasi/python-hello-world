@@ -46,3 +46,20 @@ def find_employee_of_the_month(worker_hours):
 
 name, hours = find_employee_of_the_month(work_hours)
 print(f"Employee of the month is {name} ({hours}h worked)")
+
+def return_percentage_of_args(*args): # The '*' character denotes a parameter list
+        return sum(args) * 0.05
+
+def function_with_args(*args):
+        print(args) # Args will be a tuple
+        for element in args:
+             print(element)
+
+def function_with_kwargs(**kwargs): # Double asterisk denotes a parameter list as a dictionary of key/value pairs
+    if "Fruit" in kwargs:
+        print(f"Has fruit '{kwargs["Fruit"]}' in arguments") 
+
+    if "Veggie" in kwargs:
+         print(f"Has veggie '{kwargs["Veggie"]}' in arguments")
+
+function_with_kwargs(Fruit = "Apple", Veggie = "Lettuce")
