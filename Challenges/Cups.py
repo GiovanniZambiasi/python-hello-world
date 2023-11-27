@@ -1,4 +1,5 @@
 from random import shuffle
+from time import sleep
 
 def player_guess():
     guess = ""
@@ -22,6 +23,7 @@ print("Welcome to CUPS!\nGuess in which cup the ball is")
 print(cups)
 input("Press enter to shuffle")
 print("Shuffling...")
+sleep(1.0)
 shuffle(cups)
 
 guess = player_guess()
