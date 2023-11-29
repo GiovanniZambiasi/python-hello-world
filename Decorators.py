@@ -1,8 +1,5 @@
 ## Basics:
 
-from typing import Any
-
-
 def notifydecorator(func):  # Functions can be used as decorators
     def wrapper(*args, **kwargs):   # Wrapper takes in args and kwargs to enable parameters
         print(f"Function '{func.__name__}' will be called!")
