@@ -63,3 +63,7 @@ def function_with_kwargs(**kwargs): # Double asterisk denotes a parameter list a
          print(f"Has veggie '{kwargs["Veggie"]}' in arguments")
 
 function_with_kwargs(Fruit = "Apple", Veggie = "Lettuce")
+
+# Annotations:
+def sum_numbers(lhs:int, rhs:int) -> int:   # Python allows us to annotate expected return/input types for methods
+     return lhs + rhs
