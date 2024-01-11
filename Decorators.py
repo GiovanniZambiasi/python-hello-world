@@ -26,6 +26,27 @@ def decorated_method_class():
 
 decorated_method_class()
 
+class memberdecorator():
+    def __init__(self, getter):
+        self.getter = getter
+
+    def __get__(self, instance, owner):
+        return self.getter(instance)
+    
+class Bar():
+
+    def __init__(self, val:int):
+        self.val = val
+
+    @memberdecorator
+    def value(self) -> int:
+        return self.val
+    
+bar = Bar(7)
+
+if(bar.value > 6):
+    print("Value is greater!")
+
 ## Built-in decorators
 
 class Foo:
